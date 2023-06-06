@@ -9,5 +9,8 @@ These are a few screenshots of the app
 
 <img align="left"  src="https://github.com/ayku686/collegetoindustry/blob/master/allimagess/ss2.jpeg" width="250" height="500" title="Home">
 
-<img align="center" src="https://github.com/ayku686/collegetoindustry/blob/master/allimagess/ss1.jpeg" width="250" height="500" title="Search">
+<p align="center">
+<img src="https://github.com/ayku686/collegetoindustry/blob/master/allimagess/ss1.jpeg" width=250 height=500 title="Search">
 
+<img align="right"  src="https://github.com/ayku686/collegetoindustry/blob/master/allimagess/ss3.jpeg" width="250" height="500" title="Professionals">
+</p>
