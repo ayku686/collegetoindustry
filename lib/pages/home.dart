@@ -14,6 +14,7 @@ class home extends StatefulWidget {
 }
 
 class _homeState extends State<home> {
+  String learnerEmoji = '👨‍🎓';
   int currentPage=0;
   @override
   Widget build(BuildContext context) {
@@ -45,7 +46,7 @@ class _homeState extends State<home> {
                         padding: const EdgeInsets.symmetric(horizontal: 2),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          children: const [
+                          children:  const [
                             Text("ello",
                               style: TextStyle(
                                 fontSize: 18,
@@ -61,6 +62,9 @@ class _homeState extends State<home> {
                           ],
                         ),
                       ),
+                      Text("$learnerEmoji",style: TextStyle(
+                        fontSize: 30
+                      ),)
                     ],
                   ),
 
@@ -152,37 +156,47 @@ class _homeState extends State<home> {
               ),
             ),
 
-            Padding(
-              padding: const EdgeInsets.only(left: 14,right: 7,top: 14,bottom: 20),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children:   [
-                  Text(
-                    "Top Mentors",
-                    style: TextStyle(
-                      fontSize: 23,
-                      fontWeight: FontWeight.w400,
-                      color: Colors.white,
+            Container(
+              height: 165,
+              decoration: BoxDecoration(
+                color: Colors.black54,
+                boxShadow: [
+                  BoxShadow(
+                      color: Colors.green,
+                    offset: Offset(0,3),
+                    blurRadius: 10,
+                  )
+                ]
+              ),
+              child: Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 14,right: 7,top: 14,bottom: 20),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children:   [
+                        Text(
+                          "Top Mentors",
+                          style: TextStyle(
+                            fontSize: 23,
+                            fontWeight: FontWeight.w400,
+                            color: Colors.white,
+                          ),
+                        ),
+                        Text(
+                          "See all",
+                          style: TextStyle(
+                            fontSize: 19,
+                            color: Colors.white,
+                          ),
+                        )
+                      ],
                     ),
                   ),
-                  Text(
-                    "See all",
-                    style: TextStyle(
-                      fontSize: 19,
-                      color: Colors.white,
-                    ),
-                  )
-                ],
-              ),
-            ),
+
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
-              child: Stack(
-                  children: [
-                    Container(
-                      color: Colors.white,
-                    ),
-                    Row(
+              child:Row(
                       children: [
                         Stack(
                             alignment: Alignment.center,
@@ -310,12 +324,13 @@ class _homeState extends State<home> {
                             ]
                         ),
                       ],
-                    ),
-                  ]
+                    )
+            )
+                ],
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(left: 14.0,top:40,bottom: 30,right: 7),
+              padding: EdgeInsets.only(left: 14.0,top:25,bottom: 30,right: 7),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [

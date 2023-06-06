@@ -4,12 +4,15 @@ import 'package:collegetoindustry/MyRoutes.dart';
 import 'package:collegetoindustry/pages/home.dart';
 import 'package:collegetoindustry/pages/professionals.dart';
 import 'package:collegetoindustry/pages/search.dart';
+import 'package:collegetoindustry/pages/teacher_details.dart';
 import 'package:colours/colours.dart';
 import 'package:fancy_bottom_navigation/fancy_bottom_navigation.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:page_transition/page_transition.dart';
 import 'icomoon_icons.dart';
+import 'package:responsive_framework/responsive_framework.dart';
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(const collegetoindustry());
@@ -21,10 +24,11 @@ class collegetoindustry extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       color: Colors.black,
-      home:MyHomePage(),
+      home:teacherDetails(),
+      // MyHomePage(),
       routes: {
         MyRoutes.Homepage:(context)=> home(),
         MyRoutes.Search:(context)=> search()
@@ -42,6 +46,7 @@ class _MyHomePageState extends State<MyHomePage> {
   int currentPage = 0;
   @override
   Widget build(BuildContext context) {
+    print(MediaQuery.of(context).size);
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(color: Colors.black),
@@ -50,8 +55,9 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       bottomNavigationBar: Theme(
+
         data: ThemeData(
-            backgroundColor: Colors.black
+
         ),
         child: FancyBottomNavigation(
             tabs: [
